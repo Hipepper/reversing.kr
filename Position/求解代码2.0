@@ -1,0 +1,43 @@
+借助了https://blog.csdn.net/xiangshangbashaonian/article/details/84105812  py代码：
+
+Serial='76876_77776'
+for i in range(ord('a'),ord('z')+1):
+	for j in range(ord('a'),ord('z')+1):
+		v6=i
+		v8=j
+		
+		v7 = (v6 & 1) + 5
+		v48 = ((v6 >> 4) & 1) + 5
+		v42 = ((v6 >> 1) & 1) + 5
+		v44 = ((v6 >> 2) & 1) + 5
+		v46 = ((v6 >> 3) & 1) + 5
+		
+		v34 = (v8 & 1) + 1
+		v40 = ((v8 >> 4) & 1) + 1
+		v36 = ((v8 >> 1) & 1) + 1
+		v9 = ((v8 >> 2) & 1) + 1
+		v38 = ((v8 >> 3) & 1) + 1
+ 
+		if v7 + v9 == int(Serial[0]) and v46 + v38 == int(Serial[1]) and v42 + v40 == int(Serial[2]) and v44 + v34 == int(Serial[3]) and v48 + v36 == int(Serial[4]):
+			print chr(i),chr(j)#Name前两位
+
+Serial='76876_77776'
+for i in range(ord('a'),ord('z')+1):
+	for j in range(ord('a'),ord('z')+1):
+		v20=i
+		v22=j
+		
+		v21 = (v20 & 1) + 5
+		v49 = ((v20 >> 4) & 1) + 5
+		v43 = ((v20 >> 1) & 1) + 5
+		v45 = ((v20 >> 2) & 1) + 5
+		v47 = ((v20 >> 3) & 1) + 5
+		
+		v35 = (v22 & 1) + 1
+		v41 = ((v22 >> 4) & 1) + 1
+		v37 = ((v22 >> 1) & 1) + 1
+		v23 = ((v22 >> 2) & 1) + 1
+		v39 = ((v22 >> 3) & 1) + 1
+		
+		if v21 + v23 == int(Serial[6]) and v47 + v39 == int(Serial[7]) and v43 + v41 == int(Serial[8]) and v45 + v35 == int(Serial[9]) and v49 + v37 == int(Serial[10]):
+			print chr(i),chr(j)
